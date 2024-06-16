@@ -34,7 +34,7 @@ export default async function CreateAccount() {
             <h3>Create Account</h3>
             <Image src="/assets/icons/hand.png" alt="hand" width={30} height={30} />
           </div>
-          <p>Please Enter Details</p>
+          <p>Please enter details</p>
           <CreateAccountForm />
         </div>
       </div>
