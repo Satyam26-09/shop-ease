@@ -37,7 +37,7 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
           href="/create-account"
           label="Create Account"
           appearance="primary"
-          onClick={() => (window.location.href = '/create-Account')}
+          onClick={() => (window.location.href = '/create-Account')} 
         />
       )} */}
       {/* {user && <CartLink />} */}
