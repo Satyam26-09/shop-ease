@@ -1,0 +1,40 @@
+@import '../../_css/common';
+
+.radioWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.radio {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-dark-500-5)lack;
+  border: 2px solid var(--color-dark-50);
+  outline: none;
+  cursor: pointer;
+}
+
+.radio:checked {
+  font-size: 16px;
+  background-color: var(--color-dark-500-5);
+  position: relative;
+}
+
+.radio:checked::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-dark-50);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
