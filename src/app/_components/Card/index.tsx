@@ -58,7 +58,7 @@ export const Card: React.FC<{
   const href = `/products/${slug}`
 
   const [
-    price, // eslint-disable-line no-unused-vars
+    price, // eslint-disable-line no-unused- vars
     setPrice,
   ] = useState(() => priceFromJSON(priceJSON))
 
