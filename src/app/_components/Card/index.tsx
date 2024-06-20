@@ -1,6 +1,6 @@
 'use client'
 
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 import { Product } from '../../../payload/payload-types'
@@ -26,7 +26,7 @@ const priceFromJSON = (priceJSON): string => {
         }`
       }
     } catch (e) {
-      console.error(`Cannot parse priceJSON`) // eslint-disable-line no-console
+      console.log('Cannot parse priceJSON')
     }
   }
 
@@ -43,7 +43,6 @@ export const Card: React.FC<{
   doc?: Product
 }> = props => {
   const {
-    showCategories,
     title: titleFromProps,
     doc,
     doc: { slug, title, categories, meta, priceJSON } = {},
@@ -57,10 +56,7 @@ export const Card: React.FC<{
   const sanitizedDescription = description?.replace(/\s/g, ' ') // replace non-breaking space with white space
   const href = `/products/${slug}`
 
-  const [
-    price, // eslint-disable-line no-unused- vars
-    setPrice,
-  ] = useState(() => priceFromJSON(priceJSON))
+  const [price, setPrice] = useState(() => priceFromJSON(priceJSON))
 
   useEffect(() => {
     setPrice(priceFromJSON(priceJSON))
